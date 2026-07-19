@@ -12,7 +12,7 @@ nowtime=$(date)
 # Behavior still works
 resp=$(curl -s -X POST http://localhost:8000/ask \
     -H "Content-Type: application/json" \
-    -d "{\"question\":\"verify module $nowtime\"}")
+    -d "{\"question\":\"verify module triggered: $nowtime\"}")
 echo "$resp" | grep -q '"history":' \
     || fail "/ask response missing history field. Got: $resp"
 ok "POST /ask still works with env-loaded config"

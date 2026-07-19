@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# verify_setup.sh — Module 0 acceptance gate (macOS / Linux).
+# verify_setup.sh (macOS / Linux).
 # Exits 0 only when every dependency is reachable and the venv is active.
 # Run from the repo root, after activating the project venv.
 
@@ -56,4 +56,4 @@ curl -s http://localhost:11434/api/tags | grep -q '"name":"llama3.2' \
 ok "Model llama3.2 available"
 
 echo
-echo "All checks passed. You're ready for Module 1."
+echo "All checks passed. "

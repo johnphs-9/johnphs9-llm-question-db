@@ -10,6 +10,9 @@ A small FastAPI web app that asks a locally-running LLM (Ollama with `llama3.2`)
 - The web UI shows the most recent ten interactions
 - A `/healthz` endpoint reports reachability of Ollama and Postgres
 
+### Screenshot of app
+![Local LLM Question Log](assets/LLM_question_log.png)
+
 ## Stack
 
 - **FastAPI** + **Uvicorn** — Python web server
@@ -33,8 +36,15 @@ uvicorn app.main:app --reload
 Open <http://localhost:8000>.
 
 ## Verify (self-check)
+Run verification scripts
+```bash
+./scripts/verify_setup.sh
+./scripts/verify_module.sh
+```
+### Screenshot of verification scripts
+![verification](assets/zsh_verify.png)
 
-The happy path:z
+The happy path:
 
 ```bash
 curl -s http://localhost:8000/healthz
